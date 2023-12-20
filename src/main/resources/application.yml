@@ -1,0 +1,33 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /ocr
+
+ocr:
+  img-path: /data/paddle_ocr/img/%s
+  paddle-ocr-url: http://127.0.0.1:8888/ocr,http://127.0.0.1:8888/ocr
+
+auth:
+  access-token-secret: fldifjsdnuikashe
+  refresh-token-secret: siodrfjwesj
+  access-token-expire-seconds: 7200
+  refresh-token-expire-days: 30
+  white-list: /access-token,/refresh-token
+
+sentinel-rule:
+  #资源名称
+  resource: ocr-python-api
+  #流控限流阈值类型 QPS:1 THREAD:0
+  flow-grade: 1
+  #限流阈值
+  flow-count: 1
+  #熔断策略 支持慢调用比例 SLOW_REQUEST_RATIO:0 /异常比例 ERROR_RATIO:1 /异常数策略 ERROR_COUNT:2
+  degrade-grade: 2
+  #熔断策略阈值
+  degrade-count: 3
+  #熔断触发的最小请求数，请求数小于该值时即使异常比率超出阈值也不会熔断
+  degrade-min-request-amount: 5
+  #熔断时间(s)
+  time-window: 10
+  #统计时长（单位为 ms）
+  degrade-stat-interval-ms: 120000
