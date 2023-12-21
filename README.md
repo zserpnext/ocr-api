@@ -1,4 +1,6 @@
 
+## ocr_web.py 为python flask实现的内部ocr api ,需要用命令 python ocr_web.py 运行
+
 ## 基本介绍
 
 **此文档是**《[OCR文字识别实战教程-零基础](https://www.bilibili.com/video/BV1RK411b7DU/)，SpringBoot结合PaddleOCR》实现 车牌识别、文本识别、身份证识别 地址：[https://www.bilibili.com/video/BV1RK411b7DU/?vd_source=b4307343204f5c0271966f7fe276f0eb](https://www.bilibili.com/video/BV1RK411b7DU/?vd_source=b4307343204f5c0271966f7fe276f0eb)，**教程对应的部分文档，全部文档共89页，剩余文档和完整源代码 请关注B站视频**
